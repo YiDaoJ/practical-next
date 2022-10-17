@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button } from "./Button";
+import { Button, Color } from "./Button";
 
 export default {
   title: "Components/Button",
@@ -12,4 +12,4 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
-Primary.args = { children: "Primary Button" };
+Primary.args = { children: "Primary Button", color: "primary" };
