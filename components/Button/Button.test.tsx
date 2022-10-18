@@ -9,12 +9,23 @@ describe("Button Test", () => {
 
     // https://testing-library.com/docs/react-testing-library/api/#asfragment
     // asFragment returns a DocumentFragment of rendered component. This can be useful if you need to avoid live bindings and see how your component reacts to events.
-
     const { asFragment } = render(
       <Button onClick={handleClick}>Button</Button>
     );
 
     // Snapshot testing: https://jestjs.io/docs/snapshot-testing
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  test("check Button click event", async () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Button</Button>);
+    const element = screen.getByRole("button");
+
+    await userEvent.click(element);
+    // after click, the mock function should be called
+    expect(handleClick).toHaveBeenCalled();
+
+    // Qn: https://deloittedevelopment.udemy.com/course/practical-nextjs/learn/lecture/30447226#questions/17572656
   });
 });
