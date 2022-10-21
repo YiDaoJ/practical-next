@@ -10,8 +10,8 @@ export default {
 
 const Template: ComponentStory<typeof RadioGroup> = (args) => (
   <RadioGroup {...args}>
-    <RadioButton value='a' label='Option A' />
-    <RadioButton value='b' label='Option B' />
+    <RadioButton value="a" label="Option A" />
+    <RadioButton value="b" label="Option B" />
   </RadioGroup>
 );
 

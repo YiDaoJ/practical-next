@@ -7,7 +7,7 @@ describe("Radio test", () => {
   test("render Radio component", () => {
     const handleChange = jest.fn();
     const { asFragment } = render(
-      <Radio label='Test' name='test' checked={false} onChange={handleChange} />
+      <Radio label="Test" name="test" checked={false} onChange={handleChange} />
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -16,7 +16,7 @@ describe("Radio test", () => {
     const handleChange = jest.fn();
     const user = userEvent.setup();
 
-    render(<Radio label='Test' name='test' checked onChange={handleChange} />);
+    render(<Radio label="Test" name="test" checked onChange={handleChange} />);
 
     // const input = screen.getByRole("input");
     //  Unable to find an accessible element with the role "input"
@@ -35,8 +35,8 @@ describe("Radio test", () => {
 
     render(
       <Radio
-        label='TestDisabled'
-        name='test-disabled'
+        label="TestDisabled"
+        name="test-disabled"
         onChange={handleChange}
         disabled
       />

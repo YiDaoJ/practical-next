@@ -31,9 +31,9 @@ export const RadioGroup: FC<PropsWithChildren<RadioGroupProps>> = ({
   };
 
   return (
-    <div className='radio-group__container' data-testid='radio-group'>
+    <div className="radio-group__container" data-testid="radio-group">
       {label && (
-        <label className='radio-group__label' css={GroupLabelStyle}>
+        <label className="radio-group__label" css={GroupLabelStyle}>
           {label}
         </label>
       )}
@@ -41,7 +41,7 @@ export const RadioGroup: FC<PropsWithChildren<RadioGroupProps>> = ({
         value={{ name, onChange: handleChange, selected: value }}
       >
         <div
-          className='radio-group__control'
+          className="radio-group__control"
           css={horizontal ? GroupControlHorizontal : GroupControlVertical}
         >
           {children}
