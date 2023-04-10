@@ -25,7 +25,5 @@ describe("Button Test", () => {
     await userEvent.click(element);
     // after click, the mock function should be called
     expect(handleClick).toHaveBeenCalled();
-
-    // Qn: https://deloittedevelopment.udemy.com/course/practical-nextjs/learn/lecture/30447226#questions/17572656
   });
 });
